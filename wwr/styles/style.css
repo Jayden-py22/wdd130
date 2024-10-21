@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Rock+Salt&display=swap');
+
 body {
     background-color: #fcfbfb;
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 22px;
     margin: 0;
     padding: 0;
+}
+
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+h2 {
+    margin: 0;
 }
 
 #content {
@@ -61,18 +74,30 @@ nav a:hover {
     color: #00796b;
 }
 
-.msg p {
-    color: #333;
-    line-height: 1.6;
-}
-
 .book, .join {
     background-color: #00796b;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.msg p {
+    color: #333;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+}
+
+.card-img {
+    border: 10px solid #00796b;
+}
+
+main section img {
+    box-sizing: border-box;
 }
 
 .book:hover, .join:hover {
@@ -80,9 +105,14 @@ nav a:hover {
 }
 
 .rivers-card, .camping-card, .rapids-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 20px auto;
+    margin: 200px auto;
     max-width: 300px;
+    height: 400px; 
 }
 
 .card-img, .icon {
@@ -96,11 +126,20 @@ nav a:hover {
     width: 80px;
 }
 
+#logo_link {
+    padding-top: 5px;
+}
+
+nav a {
+    padding: 35px;
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 
 footer a {
