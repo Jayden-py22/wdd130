@@ -1,19 +1,17 @@
-/* 全局基础设置 */
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f9f9f9; /* 页面背景色 */
+    background-color: #f9f9f9;
 }
 
-/* Header 样式 */
 header {
-    width: 100%; /* 设置全宽 */
-    background-color: #1e2d3d; /* 深蓝色背景 */
+    width: 100%;
+    background-color: #1e2d3d;
 }
 .header-container {
-    max-width: 1200px; /* 限制内容最大宽度 */
-    margin: 0 auto; /* 居中对齐 */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -21,8 +19,8 @@ header {
 }
 header nav {
     display: flex;
-    flex: 1; /* 填充剩余空间 */
-    justify-content: center; /* 居中对齐导航链接 */
+    flex: 1;
+    justify-content: center;
 }
 header nav a {
     color: #ffffff;
@@ -32,35 +30,51 @@ header nav a {
     text-align: center;
 }
 header nav a:hover {
-    color: #ff4f5e; /* 悬停时颜色变化 */
+    color: #ff4f5e;
 }
 .logo {
     max-height: 50px;
 }
 
-/* 主内容区域 */
 main h1, main p {
     text-align: center;
 }
 
-/* Event Grid for 3 Columns */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
     text-align: center;
-    font-family: arial;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-  .price {
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.price {
     color: grey;
     font-size: 22px;
 }
-  .card button {
+
+.card button {
     border: none;
     outline: 0;
     padding: 12px;
@@ -71,22 +85,20 @@ main h1, main p {
     width: 100%;
     font-size: 18px;
 }
-  .card button:hover {
+
+.card button:hover {
     opacity: 0.7;
 }
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+footer {
+    width: 100%;
+    background-color: #1e2d3d;
+    color: #ffffff;
 }
 
-/* Footer 样式 */
-footer {
-    width: 100%; /* 设置全宽 */
-    background-color: #1e2d3d; /* 深蓝色背景 */
-}
 .footer-container {
-    max-width: 1200px; /* 确保与 header 的最大宽度一致 */
-    margin: 0 auto; /* 居中对齐 */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -95,25 +107,29 @@ footer {
 
 .footer-center nav {
     display: flex;
-    flex: 1; /* 填充剩余空间 */
-    justify-content: center; /* 居中对齐导航链接 */
+    flex: 1;
+    justify-content: center;
 }
 
 .footer-center nav a {
     color: #ffffff;
-    margin: 0 1.5rem; /* 确保与 header 中的间距一致 */
+    margin: 0 1.5rem;
     text-decoration: none;
+    font-family: var(--heading-font);
     font-weight: bold;
+    text-align: center;
 }
 
 .footer-center nav a:hover {
-    color: #ff4f5e; /* 悬停时颜色变化 */
+    color: #ff4f5e;
 }
+
 .footer-right a img {
     height: 24px;
     margin-left: 1rem;
     transition: opacity 0.3s ease;
 }
+
 .footer-right a img:hover {
     opacity: 0.7;
 }
@@ -121,9 +137,23 @@ footer {
 .footer-bottom {
     text-align: center;
     padding: 1rem 0;
+    font-size: 14px;
+    color: #ffffff;
 }
-.footer-bottom p,
-.footer-bottom nav {
-    display: inline-block; /* 保证多行内容在同一水平居中 */
+
+.footer-bottom p {
     margin: 0.5rem;
+}
+
+.footer-bottom nav a {
+    color: #ffffff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+
+.footer-bottom nav a:hover {
+    color: #ff4f5e;
+    text-decoration: underline;
 }
