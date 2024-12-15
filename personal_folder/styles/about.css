@@ -50,43 +50,83 @@ main h1, section h2 {
     text-align: center;
     font-size: 2rem;
     color: #333;
-}
-
-main p, section p {
-    text-align: center;
-    color: #555;
-    line-height: 1.6;
-    margin: 1rem 0;
+    margin-bottom: 0.5rem; /* 缩小标题与下方内容的间距 */
 }
 
 .section-divider {
-    margin: 2rem auto;
+    margin: 0.5rem auto; /* 缩小分隔线上下的间距 */
     width: 60%;
     height: 2px;
     background: #ccc;
 }
 
-.faq-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
+.faq-container {
+    padding: 0; /* 去除顶部多余的内边距 */
+    margin-top: -10px; /* 缩小 FAQ 容器与标题的间距 */
+    margin-bottom: 2rem; /* 给 FAQ 和 Footer 增加间距 */
+    max-width: 800px;
+    margin: 0 auto; /* 保持容器居中 */
 }
 
-.faq-grid div h3 {
+.faq-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.faq-column {
+    flex: 1;
+    padding: 15px;
+    background-color: #f4f4f4; /* Neutral background */
+    border: 1px solid #ddd; /* Light border */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 18px;
+}
+
+.faq-column:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.faq-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.faq-content h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.faq-content p {
+    font-size: 16px;
     color: #555;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.faq-grid div p {
-    color: #777;
-    font-size: 0.9rem;
-    text-align: justify;
+.closebtn {
+    float: right;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.closebtn:hover {
+    color: #333;
 }
 
 footer {
-    width: 100%;
+    margin-top: 2rem; /* Footer 与内容的间隙 */
+    padding-top: 1rem; /* Footer 内部顶部间距 */
     background-color: #1e2d3d;
     color: #ffffff;
 }

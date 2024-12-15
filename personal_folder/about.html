@@ -32,21 +32,60 @@
     <section>
         <hr class="section-divider">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq-grid">
-            <div>
-                <h3>What types of events do you specialize in?</h3>
-                <p>We cover a wide range of events, including corporate meetings, social gatherings, team-building activities, and more.</p>
+    </section>
+    
+    <div class="faq-container">
+        <div class="faq-row">
+            <!-- Replacing "Box 1" with the actual question -->
+            <div class="faq-column" onclick="openTab('b1');">
+                What types of events do you specialize in?
             </div>
-            <div>
-                <h3>How far in advance should I book?</h3>
-                <p>We recommend booking at least 2 weeks in advance to ensure availability and optimal planning.</p>
+            <!-- Replacing "Box 2" with the actual question -->
+            <div class="faq-column" onclick="openTab('b2');">
+                How far in advance should I book?
             </div>
-            <div>
-                <h3>Do you provide on-site support?</h3>
-                <p>Yes, our team is available on-site to ensure your event runs smoothly.</p>
+            <!-- Replacing "Box 3" with the actual question -->
+            <div class="faq-column" onclick="openTab('b3');">
+                Do you provide on-site support?
             </div>
         </div>
-    </section>
+    
+        <div id="b1" class="faq-content">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+            <h2>What types of events do you specialize in?</h2>
+            <p>We cover a wide range of events, including corporate meetings, social gatherings, team-building activities, and more.</p>
+        </div>
+    
+        <div id="b2" class="faq-content">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+            <h2>How far in advance should I book?</h2>
+            <p>We recommend booking at least 2 weeks in advance to ensure availability and optimal planning.</p>
+        </div>
+    
+        <div id="b3" class="faq-content">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+            <h2>Do you provide on-site support?</h2>
+            <p>Yes, our team is available on-site to ensure your event runs smoothly.</p>
+        </div>
+    </div>
+
+    <script>
+function openTab(tabName) {
+    // Select all elements with the class "faq-content"
+    const faqContents = document.getElementsByClassName("faq-content");
+
+    // Hide all FAQ content elements
+    for (let i = 0; i < faqContents.length; i++) {
+        faqContents[i].style.display = "none";
+    }
+
+    // Display the clicked tab's content
+    const targetTab = document.getElementById(tabName);
+    if (targetTab) {
+        targetTab.style.display = "block";
+    }
+}
+    </script>
     <footer>
         <div class="footer-container">
             <div class="footer-left">
